@@ -35,6 +35,7 @@
             // timerCheckTime
             // 
             this.timerCheckTime.Interval = 600000;
+            this.timerCheckTime.Tick += new System.EventHandler(this.timerCheckTime_Tick);
             // 
             // FrmMain
             // 
