@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
+using Tools;
 namespace Disconnect_Network
 {
     static class Program
@@ -13,9 +13,11 @@ namespace Disconnect_Network
         [STAThread]
         static void Main()
         {
+            RegistryHelper.add_To_Boot_Options(Application.ProductName, Application.ExecutablePath);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FrmMain frmMain = new FrmMain();
+            Application.Run(frmMain);
         }
     }
 }

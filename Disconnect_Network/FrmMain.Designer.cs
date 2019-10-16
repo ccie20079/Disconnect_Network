@@ -1,6 +1,6 @@
 ﻿namespace Disconnect_Network
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -29,11 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.timerCheckTime = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // timerCheckTime
+            // 
+            this.timerCheckTime.Interval = 600000;
+            // 
+            // FrmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(1019, 473);
+            this.Name = "FrmMain";
+            this.Text = "Disconnect_Network";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmMain_Paint);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timerCheckTime;
     }
 }
 
